@@ -38,5 +38,7 @@ public class Multioperador {
 	public void agregarNumero(int x) {
 		numeros.add(x);
 	}
+	
+	public Multioperador() {}
 
 }
