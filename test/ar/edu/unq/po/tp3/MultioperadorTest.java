@@ -1,8 +1,10 @@
 package ar.edu.unq.po.tp3;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.BeforeEach;
+
+import org.junit.jupiter.api.Test;
 
 public class MultioperadorTest {
 	private Multioperador multioperador;
@@ -29,7 +31,7 @@ public class MultioperadorTest {
 	@Test
 	public void testRestarNumeros() {
 		int amount = multioperador.restarTodosLosNumeros();
-		assertEquals(amount, 57);
+		assertEquals(amount, -143);
 	}
 
 	@Test

@@ -1,9 +1,10 @@
 package ar.edu.unq.po.tp4;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
+
+import org.junit.jupiter.api.Test;
 
 public class TrabajadorTest {
 
@@ -27,7 +28,7 @@ public class TrabajadorTest {
 		trabajador.agregarIngreso(ingreso1);
 		trabajador.agregarIngreso(ingreso2);
 		trabajador.agregarIngreso(ingresoPorHorasExtras);
-		assertEquals(130000, trabajador.getTotalPercibido());
+		assertEquals(120000, trabajador.getTotalPercibido());
 	}
 
 }

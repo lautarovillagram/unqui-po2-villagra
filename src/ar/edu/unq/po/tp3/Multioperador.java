@@ -28,8 +28,10 @@ public class Multioperador {
 	}
 
 	public int multiplicarTodosLosNumeros() {
-		int total = 0;
-		for (Integer numero : numeros) {
+		List<Integer> numerosSinElPrimero = numeros;
+		int total = numerosSinElPrimero.remove(0);
+
+		for (Integer numero : numerosSinElPrimero) {
 			total *= numero;
 		}
 		return total;
@@ -38,7 +40,8 @@ public class Multioperador {
 	public void agregarNumero(int x) {
 		numeros.add(x);
 	}
-	
-	public Multioperador() {}
+
+	public Multioperador() {
+	}
 
 }
