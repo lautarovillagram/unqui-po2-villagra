@@ -14,20 +14,20 @@ public class CajaCentralTest {
 	@BeforeEach
 	public void setUp() throws Exception {
 		caja = new CajaCentral();
-		azucar = new ProductoCooperativa(10d);
-		queso = new ProductoTradicional(20d);
-		leche = new ProductoCooperativa(15d);
+		azucar = new ProductoCooperativa(10d, 5);
+		queso = new ProductoTradicional(20d, 4);
+		leche = new ProductoCooperativa(15d, 6);
 	}
 
 	@Test
 	public void testPrecioTotal() {
-		double precioTotal = caja.getPrecioTotal();
+		double precioTotal = caja.getTotalAPagar();
 
 		assertEquals(precioTotal, 0);
-		caja.agregarProducto(azucar);
-		caja.agregarProducto(queso);
-		caja.agregarProducto(leche);
-		precioTotal = caja.getPrecioTotal();
+		caja.registrarProducto(azucar);
+		caja.registrarProducto(queso);
+		caja.registrarProducto(leche);
+		precioTotal = caja.getTotalAPagar();
 		assertEquals(precioTotal, 43);
 	}
 

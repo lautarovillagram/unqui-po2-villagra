@@ -5,17 +5,19 @@ import java.util.List;
 
 public class CajaCentral {
 
-	private List<ProductoCooperativa> productos = new ArrayList<ProductoCooperativa>();
+	private double totalAPagar;
 
-	public void agregarProducto(ProductoCooperativa producto) {
-		productos.add(producto);
+	public void registrarProducto(Producto productoAAgregar) {
+
+		if (productoAAgregar.getCantidad() > 0) {
+			totalAPagar += productoAAgregar.getPrecio();
+			productoAAgregar.setCantidad(productoAAgregar.getCantidad() - 1);
+		}
+
 	}
 
-	public double getPrecioTotal() {
-		double precioTotal = productos.stream().mapToDouble(ProductoCooperativa::getPrecio).sum();
-		return precioTotal;
+	public double getTotalAPagar() {
+		return this.totalAPagar;
 	}
-	
-	
 
 }

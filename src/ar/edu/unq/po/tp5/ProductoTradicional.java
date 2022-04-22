@@ -1,9 +1,9 @@
 package ar.edu.unq.po.tp5;
 
-public class ProductoTradicional extends ProductoCooperativa {
+public class ProductoTradicional extends Producto {
 
-	public ProductoTradicional(double precioAsignado) {
-		super(precioAsignado);
+	public ProductoTradicional(double precioAsignado, int stock) {
+		super(precioAsignado, stock);
 
 	}
 
