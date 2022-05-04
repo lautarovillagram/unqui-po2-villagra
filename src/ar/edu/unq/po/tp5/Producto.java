@@ -26,6 +26,14 @@ public class Producto {
 		this.setCantidad(amount);
 	}
 	
+	public boolean hayStock() {
+		return this.getCantidad() > 0;
+	}
+	
+	public void restarUnStock() {
+		this.setCantidad(this.getCantidad() - 1);
+	}
+	
 	
 
 }
